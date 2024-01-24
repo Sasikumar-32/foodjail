@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.h_div_container{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #e9c46a;
+    background-color: #264653;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 5px 2px #fff;
+    z-index: 1;
+}
+.h_shop_name{
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15px;
+}
+.h_icon{
+    font-size: 20px;
+    margin-right: 20px;
+    border: 1px solid #e9c46a;
+    padding: 2px;
+    border-radius: 2px;
+    color: #e9c46a;
+    text-decoration: none;
+    transition: .4s;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: relative;
+}
+nav ul li{
+    margin-left: 5px;
+}
+.active{
+    color: white;
+    transform: scale(1.3);
+}

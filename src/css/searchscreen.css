@@ -1,0 +1,87 @@
+.ss_container{
+    width: 100%;
+    padding: 10px 0px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ss_searchbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.ss_search_icon{
+    border: 1px solid #264653;
+    width: 12%;
+    height: 25px;
+    border-radius: 2px 0px 0px 2px;
+    border-right: 0px;
+}
+.ss_input{
+    height: 25px;
+    width: 250px;
+    padding: 0px 5px;
+    border-radius: 0px 2px 2px 0px;
+    outline: none;
+    border: 1px solid #264653;
+    background-color: transparent;
+    text-decoration: none;
+    color: #000;
+}
+.ss_foodlist_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px 10px;
+    border-bottom: 1px solid #264653;
+    transition: .1s;
+}
+.ss_img_container{
+    height: 40%;
+    border: 1px solid #264653;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+.ss_img_container:hover{
+    box-shadow: 0px 0px 4px #264653;
+    animation: popup .5s linear;
+}
+@keyframes popup {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.ss_img{
+    border-radius: 5px;
+}
+.ss_text{
+    color: #000;
+}
+.ss_btn{
+    color: #264653;
+    text-align: 'center';
+    padding: 2px 40px;
+    outline: none;
+    border: 1px solid #264653;
+    border-radius: 5px;
+    transition: .2s;
+}
+.ss_btn:hover{
+    box-shadow: 0px 0px 4px #264653;
+}

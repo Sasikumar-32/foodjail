@@ -1,0 +1,28 @@
+.o_foodlist_container {
+    display: flex;
+    min-height: 80vh;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.o_img_container {
+    cursor: pointer;
+    text-align: center;
+}
+
+.o_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.o_text {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.fd_rupee_icon {
+    height: 16px;
+}
