@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Header from './components/header/header'
-import Homescreen from './pages/homescreen'
-import Searchscreen from './pages/searchscreen'
+import React, { useState, useEffect } from 'react';
+import Header from './components/header/header';
+import Homescreen from './pages/homescreen';
+import Searchscreen from './pages/searchscreen';
 import Footer from './components/footer/footer';
-import './App.css'
+import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Fooddetail from './pages/fooddetail';
 import Cart from './pages/cart';
@@ -12,7 +12,15 @@ import Orderpage from './pages/orderpage';
 import Category from './pages/category';
 import Loginsignup from './pages/loginsignup';
 
-const foodArray = [
+
+const App = () => {
+  const [cartItems,setCartItems] = useState([]);
+  const [orderedFoods,setOrderedFoods] = useState([]);
+  const [foodArray,setFoodArray] = useState([]);
+  const currentDate = new Date();
+  
+  useEffect(() => {
+    const fetchedFoodArray = [
   {
     foodId:1,
     foodName:'Fried rice',
@@ -30,10 +38,10 @@ const foodArray = [
     foodName:'Non',
     price:50.00,
     reviews:[
-      {name:'Diego',review:'Spice lovers, this is your paradise. Flavor explosion!'},
-      {name:'Zoe',review:'The grilling brings out amazing smoky notes.'},
-      {name:'Aarav',review:'Rich and flavorful. Hits the spot every time.'},
-      {name:'Mia',review:'The sauce is so velvety. A comforting dish.'}
+      // {name:'Diego',review:'Spice lovers, this is your paradise. Flavor explosion!'},
+      // {name:'Zoe',review:'The grilling brings out amazing smoky notes.'},
+      // {name:'Aarav',review:'Rich and flavorful. Hits the spot every time.'},
+      // {name:'Mia',review:'The sauce is so velvety. A comforting dish.'}
     ],
     foodImage:require('./images/image-02.jpg'),
     category:'veg',
@@ -375,14 +383,55 @@ const foodArray = [
     foodImage:require('./images/image-28.jpg'),
     category:'soup',
   },
+  {
+    foodId:29,
+    foodName:'Tiramisu',
+    price:120.00,
+    reviews:[
+      { name: 'Avery', review: 'Bold and savory. Hits all the right notes.' },
+      { name: 'Evelyn', review: 'A culinary revelation. Outstanding in every aspect.' },
+      { name: 'Wyatt', review: 'Satisfies even the most discerning palate. A culinary gem.' },
+    ],
+    foodImage:require('./images/image-29.jpg'),
+    category:'desert',
+  },
+  {
+    foodId:30,
+    foodName:'Apple pie',
+    price:120.00,
+    reviews:[
+      { name: 'Avery', review: 'Bold and savory. Hits all the right notes.' },
+      { name: 'Evelyn', review: 'A culinary revelation. Outstanding in every aspect.' },
+      { name: 'Wyatt', review: 'Satisfies even the most discerning palate. A culinary gem.' },
+    ],
+    foodImage:require('./images/image-30.jpg'),
+    category:'desert',
+  },
+  {
+    foodId:31,
+    foodName:'creme Brulee',
+    price:70.00,
+    reviews:[
+      { name: 'Lily', review: 'Velvety goodness. Comfort food elevated to new heights.' },
+      { name: 'Gabriel', review: 'Unforgettable richness. A dish to remember.' },
+    ],
+    foodImage:require('./images/image-31.jpg'),
+    category:'desert',
+  },
+  {
+    foodId:32,
+    foodName:'Fruit Tart',
+    price:170.00,
+    reviews:[
+      { name: 'Landon', review: 'An explosion of taste in every bite. Truly impressive.' },
+    ],
+    foodImage:require('./images/image-32.jpg'),
+    category:'desert',
+  },
+  ];
+    setFoodArray(fetchedFoodArray)
+  }, [])
   
-];
-
-const currentDate = new Date();
-
-const App = () => {
-  const [cartItems,setCartItems] = useState([]);
-  const [orderedFoods,setOrderedFoods] = useState([]);
 
   return (
   <div className='app_container'>
@@ -413,7 +462,10 @@ const App = () => {
       <Route path='cart' element={<Cart 
         cartItems={cartItems} 
         setCartItems={setCartItems} 
-        foodArray={foodArray}/>} 
+        foodArray={foodArray}
+        orderedFoods={orderedFoods} 
+        setOrderedFoods={setOrderedFoods}
+        />} 
       />
       <Route path='loginsignup' element={<Loginsignup /> } />
     </Routes>

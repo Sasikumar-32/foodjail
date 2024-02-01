@@ -9,7 +9,7 @@
 }
 .fj_juice_bg_container{
     width: 20%;
-    height: 400px;
+    height: 500px;
     background-color: black;
     background-image: url('../images/image-20.jpg');
     object-fit: cover;
@@ -24,9 +24,9 @@
 }
 .fj_food_bg_container{
     width: 80%;
-    height: 400px;
+    height: 500px;
     background-color: black;
-    background-image: url('../images/image-05.jpg');
+    background-image: url('../images/image.jpeg');
     object-fit: cover;
     background-position: center;
     background-size: cover;
@@ -40,7 +40,7 @@
     line-height: 25px;
     font-size: 20px;
     font-family: 'Lobster', sans-serif !important;
-    color: #fff;
+    color: #000;
     /* -webkit-text-stroke: .4px #264653; */
     letter-spacing: .5px;
     font-weight: bold;

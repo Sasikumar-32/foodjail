@@ -1,14 +1,21 @@
-.o_foodlist_container {
-    min-height: 80vh;
+.o_container{
     width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+}
+.o_foodlist_container {
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px 10px;
-    border-top: 1px solid #264653;
+    padding: 20px 0px;
     transition: .1s;
 }
 
@@ -56,11 +63,32 @@
 .o_value_text{
     font-size: 20px;
     width: 100px;
+    text-align: right;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 2px;
     border-left: 1px solid #264653;
-    text-align: right;
-
+}
+.o_foodname{
+    font-size: 20px;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.o_empty_cart{
+    align-self: center;
+}
+.o_place_order_btn{
+    width: 100%;
+    padding: 8px;
+    font-size: 20px;
+    background-color: #264653;
+    border: 1px solid white;
+    text-align: center;
+    color: #e9c46a;
+    transition: .2s;
+    cursor:default;
 }

@@ -5,8 +5,18 @@
     flex-direction: row;
     padding: 10px;
 }
+.c_icon{
+    font-size: 25px;
+    border: 1px solid #e9c46a;
+    padding: 2px;
+    border-radius: 2px;
+    color: #e9c46a;
+    transition: .4s;
+}
 .c_choice_nav_container{
-    width:25%;
+    width:20%;
+    transition: .3s;
+    border-right: 1px solid #264653;
 }
 .c_choice_ul_container {
     width: 100%;
@@ -15,7 +25,6 @@
     display: flex;
     flex-direction: column;
     padding: 20px 10px;
-    border-right: 1px solid #264653;
     row-gap: 5px;
     list-style-type: none;
 }
@@ -28,20 +37,26 @@
     border-radius: 5px;
     transition: .2s;
 }
+.c_div_container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .c_foodlist_container{
-    width: 75%;
-    height: 90vh;
+    width: 100%;
+    height: 600px;
     overflow: scroll;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 20px 10px;
     transition: .1s;
 }
 .c_img_container{
+    height: fit-content;
     border: 1px solid #264653;
     padding: 5px;
     border-radius: 5px;
@@ -55,6 +70,13 @@
     box-shadow: 0px 0px 4px #264653;
     animation: popup .5s linear;
 }
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: #fff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #264653;
+  }
 @keyframes popup {
     0% {
         transform: translateY(0);
@@ -79,7 +101,7 @@
     outline: none;
     border: 1px solid #264653;
     border-radius: 5px;
-    transition: .2s;
+    transition: .5s;
 }
 .c_btn:hover{
     box-shadow: 0px 0px 4px #264653;
@@ -89,30 +111,29 @@
     transform: scale(1.05);
     background-color: #2a9d8f !important;
 }
+.c_mobile_view_icon{
+    display: none;
+}
 
 @media screen and (max-width: 425px) {
-    .c_choice_nav_container{
-        width: 100%;
-    }
     .c_container{
         flex-direction: column;
     }
-    .c_choice_ul_container{
-        height: fit-content;
-        align-items: center;
-        border-right: 0;
+    .c_div_container{
         width: 100%;
-        border-bottom: 1px solid #264653;
     }
-    .c_choice_ul_container li{
-        width: 250px;
+    .c_choice_nav_container{
+        width:100%;
+        position: absolute;
+        top:-100vh;
+        left:2px;
+        border-right: 0px solid #264653;
+
     }
-    .c_foodlist_container{
-        width: 100%;
-        height: fit-content;
-        justify-content: center;
-    }
-    .c_img{
-        width: 150px;
-    }
+    .c_mobile_view_icon{
+        display: block;
+    }  
+    .c_choice_nav_container.link_active{
+        top: 18vh;
+    }  
 }

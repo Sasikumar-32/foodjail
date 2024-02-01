@@ -5,12 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    row-gap: 10px;
 }
 .ss_searchbar{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
 }
 .ss_search_icon{
     border: 1px solid #264653;
@@ -31,15 +33,23 @@
     color: #000;
     border-left: 0;
 }
-.ss_foodlist_container{
+.ss_result_container{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 20px;
+    border-top: 1px solid #264653;
+    border-bottom: 1px solid #264653;
+}
+.ss_foodlist_container{
+    width: 95%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-    padding: 20px 10px;
-    border-bottom: 1px solid #264653;
+    gap: 35px;
     transition: .1s;
 }
 .ss_img_container{

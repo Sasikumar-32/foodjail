@@ -11,7 +11,7 @@ button:hover{
   cursor: pointer;
 }
 .app_container{
-  background-color: #e9c46a;
+  background-color: #fff;
 }
 ::-webkit-scrollbar {
   width: 3px;
@@ -20,22 +20,10 @@ button:hover{
 ::-webkit-scrollbar-thumb {
   background-color: #264653;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width:425px){
   img{
-    width: 200px;
-    height: 200px;
-  }
-}
-@media screen and (min-width:321px) and (max-width:375px){
-  img{
-    width: 155px;
-    height: 155px;
-  }
-}
-@media screen and (min-width:376px) and (max-width:425px){
-  img{
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
   }
 }
 @media screen and (min-width:426px) and (max-width:1024px){

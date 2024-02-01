@@ -1,13 +1,19 @@
-.fl_foodlist_container{
+.fl_container{
     width: 100%;
-    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    border-top: 1px solid #264653;
+}
+.fl_foodlist_container{
+    width: 95%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-    padding: 20px 10px;
-    border-top: 1px solid #264653;
+    gap: 35px;
+    padding: 20px;
     transition: .1s;
 }
 .fl_img_container{
@@ -40,6 +46,9 @@
 }
 .fl_text{
     color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .fl_btn{
     color: #264653;
@@ -52,4 +61,13 @@
 }
 .fl_btn:hover{
     box-shadow: 0px 0px 4px #264653;
+}
+@media screen and (max-width: 425px) {
+    .fl_text,.ss_text,.c_text{
+        text-align: center;
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
