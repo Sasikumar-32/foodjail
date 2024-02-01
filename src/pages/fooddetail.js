@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/fooddetail.css'
-// import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa";
-import { BsCurrencyRupee } from "react-icons/bs";
+// import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa"
+import { BsCurrencyRupee } from "react-icons/bs"
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const Fooddetail = ({cartItems,setCartItems,foodArray}) => {
     const navigate = useNavigate();
-    const [showReviews,setShowReviews] = useState(false)
+    const [showReviews,setShowReviews] = useState(false);
     const location = useLocation();
     const index = location.state.index;
-    console.log(showReviews)
+
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+  },[])
   return (
     <div className='fd_foodlist_container'>
        <div key={index} className='fd_img_container'>
@@ -19,7 +25,7 @@ const Fooddetail = ({cartItems,setCartItems,foodArray}) => {
         </div>
         <div>
           <button 
-            className='fd_btn' onClick={() => setShowReviews(!showReviews)}>
+            className='fd_btn fd_review_btn' onClick={() => setShowReviews(!showReviews)}>
             {`REVIEWS(${foodArray[index].reviews.length})`} 
             {/* {showReviews ? 
               <FaArrowCircleUp className='fd_icon'/> : 

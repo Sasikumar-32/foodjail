@@ -1,8 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 .h_div_container{
     width: 100%;
     height: 10vh;
@@ -24,8 +20,7 @@
     margin-left: 15px;
 }
 .h_icon{
-    font-size: 20px;
-    margin-right: 20px;
+    font-size: 25px;
     border: 1px solid #e9c46a;
     padding: 2px;
     border-radius: 2px;
@@ -33,16 +28,44 @@
     text-decoration: none;
     transition: .4s;
 }
-nav ul{
+
+.h_nav_bar .h_nav_links{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    position: relative;
-}
-nav ul li{
-    margin-left: 5px;
+    gap: 30px;
+    margin-right: 15px;
+    transition-duration: .5s;
 }
 .active{
     color: white;
     transform: scale(1.3);
+}
+.h_mobile_view_icon{
+    display: none;
+}
+
+@media screen and (max-width: 425px) {
+    .h_icon{
+        font-size: 30px;
+    }
+    .h_mobile_view_icon{
+        display: flex;
+        margin-right: 18px;
+    }
+    .h_nav_bar .h_nav_links{
+        background-color: #264653;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 11vh;
+        right: -99999px;
+        padding: 10px 15px;
+        gap: 20px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .h_nav_links.link_active{
+        right: -10px;
+    }
 }

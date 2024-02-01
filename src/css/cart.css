@@ -1,3 +1,54 @@
-.c_container{
+.cart_container {
     min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 10px;
+    border-top: 1px solid #264653;
+    transition: .1s;
+}
+
+.cart_img_container {
+    border: 1px solid #264653;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3px;
+}
+
+.cart_img {
+    border-radius: 5px;
+}
+
+.cart_text {
+    font-size: 20px;
+}
+
+.fd_rupee_icon {
+    height: 16px;
+}
+.cart_food_description{
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart_order_btn , .cart_rmv_btn{
+    width: 100%;
+    padding: 8px;
+    background-color: #264653;
+    border: 1px solid white;
+    text-align: center;
+    color: #e9c46a;
+    border-radius: 5px;
+    transition: .2s;
 }

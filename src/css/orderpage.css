@@ -29,6 +29,7 @@
 
 
 .op_text {
+    color: #000;
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -45,7 +46,7 @@
     font-size: 16px;
     padding: 5px 10px;
     margin: 0 5px;
-    background-color: #2a9d8f;
+    background-color: #264653;
     color: white;
     border: none;
     border-radius: 5px;
@@ -53,10 +54,11 @@
 }
 
 .op_input{
-    height: 25px;
-    width: 250px;
-    padding: 0px 5px;
-    border-radius: 2px;
+    font-size: 14px;
+    width: 50px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
     outline: none;
     border: 1px solid #264653;
     background-color: transparent;
@@ -66,13 +68,15 @@
 .op_confirm_button {
     font-size: 18px;
     padding: 10px 20px;
-    background-color: #2a9d8f;
+    background-color: #264653;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: .3s;
 }
 
 .op_confirm_button:hover {
-    box-shadow: 0px 0px 5px 2px #264653;
+    background-color: #5da4c0;
+    color: #264653;
 }

@@ -11,9 +11,9 @@ export class Footer extends Component {
       <div className='f_div_container'>
         <p className='f_shop_name'>&copy; {this.props.currentDate.getFullYear()} All rights reserved</p>
         <div className='f_socialmedia_icons'>
-          <FaInstagram aria-label="Instagram" />
-          <FaFacebook aria-label="Facebook" />
-          <FaTwitter aria-label="Twitter" />
+          <FaInstagram className='h_icon' aria-label="Instagram" />
+          <FaFacebook className='h_icon' aria-label="Facebook" />
+          <FaTwitter className='h_icon' aria-label="Twitter" />
         </div>
       </div>
     )

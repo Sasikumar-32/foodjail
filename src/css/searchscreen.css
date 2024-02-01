@@ -15,12 +15,12 @@
 .ss_search_icon{
     border: 1px solid #264653;
     width: 12%;
-    height: 25px;
+    height: 30px;
     border-radius: 2px 0px 0px 2px;
     border-right: 0px;
 }
 .ss_input{
-    height: 25px;
+    height: 30px;
     width: 250px;
     padding: 0px 5px;
     border-radius: 0px 2px 2px 0px;
@@ -29,6 +29,7 @@
     background-color: transparent;
     text-decoration: none;
     color: #000;
+    border-left: 0;
 }
 .ss_foodlist_container{
     width: 100%;

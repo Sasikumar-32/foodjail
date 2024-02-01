@@ -4,7 +4,7 @@
 }
 .fd_img_container{
     height: 40%;
-    padding: 5px;
+    padding: 20px 0px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     border-radius: 5px;
 }
 .fd_review_btn{
-    width:100%;
+    width:100% !important;
     margin-bottom: 5px;
     padding: 5px;
     outline: none;
@@ -33,7 +33,7 @@
 }
 
 .fd_text{
-    color: #2a9d8f;
+    color: #000;
     font-size: 22px;
     text-align: center;
     font-weight:600;
@@ -42,7 +42,8 @@
     height: 16px;
 }
 .fd_btn{
-    width: 100%;
+    font-size: 18px;
+    width: 50%;
     margin-bottom: 5px;
     color: #fff;
     background-color: #264653;

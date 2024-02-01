@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap');
+
 .hs_div_container{
     width: 100%;
     min-height: 80vh;
@@ -5,13 +7,6 @@
     align-items: center;
     justify-content: center; 
     flex-direction: column; 
-    background-color: #e9c46a;  
     box-sizing: border-box;
-}
-.hs_caption{
-    padding: 20px;
-    color: #2a9d8f;
-    letter-spacing: .5px;
-    font-weight: bold;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
 }

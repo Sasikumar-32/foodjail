@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import '../css/orderpage.css'
 
@@ -8,19 +8,33 @@ const Orderpage = ({foodArray,orderedFoods,setOrderedFoods}) => {
     const [quantity,setQuantity] = useState(1);
     const index = location.state.index;
 
+    useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+    },[])
+
     const handleConfirm = () => {
-        const userInput = window.confirm('Are you sure want to order food?');
-        if (userInput) {
-            const orderedFood = {
-                ...foodArray[index],
-                quantity: quantity,
-                total:quantity * (foodArray[index].price),
-            };
-            setOrderedFoods([...orderedFoods, orderedFood]);
-            alert('Successfully order placed');
-            navigate('/order');
+        console.log("called")
+        if(quantity>0){
+            const userInput = window.confirm('Are you sure want to order food?');
+            if (userInput) {
+                const orderedFood = {
+                    ...foodArray[index],
+                    quantity: quantity,
+                    total:quantity * (foodArray[index].price),
+                };
+                setOrderedFoods([...orderedFoods, orderedFood]);
+                alert('Successfully order placed');
+                navigate('/order');
+            }
+        }
+        else{
+            alert('Please select atleast 1 quantity!!!');
         }
     };
+    
   return (
     <div className='op_fooddetail_container'>
         <div className='op_img_container' onClick={() =>{}}>

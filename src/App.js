@@ -10,6 +10,7 @@ import Cart from './pages/cart';
 import Order from './pages/order';
 import Orderpage from './pages/orderpage';
 import Category from './pages/category';
+import Loginsignup from './pages/loginsignup';
 
 const foodArray = [
   {
@@ -398,10 +399,23 @@ const App = () => {
         setOrderedFoods={setOrderedFoods}
         /> } 
       />
-      <Route path='orderpage' element={<Orderpage foodArray={foodArray} orderedFoods={orderedFoods} setOrderedFoods={setOrderedFoods}/> } />
+      <Route path='orderpage' element={
+        <Orderpage 
+          foodArray={foodArray} 
+          orderedFoods={orderedFoods} 
+          setOrderedFoods={setOrderedFoods}/> } 
+        />
       <Route path='category' element={<Category foodArray={foodArray}/> } />
-      <Route path='order' element={<Order orderedFoods={orderedFoods}/> } />
-      <Route path='cart' element={<Cart cartItems={cartItems}/>} />
+      <Route path='order' element={<Order 
+        orderedFoods={orderedFoods} 
+        setOrderedFoods={setOrderedFoods} /> } 
+      />
+      <Route path='cart' element={<Cart 
+        cartItems={cartItems} 
+        setCartItems={setCartItems} 
+        foodArray={foodArray}/>} 
+      />
+      <Route path='loginsignup' element={<Loginsignup /> } />
     </Routes>
     <Footer currentDate={currentDate}/> 
   </div>
