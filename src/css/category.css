@@ -31,7 +31,6 @@
 .c_choice_ul_container li{
     padding: 12px 4px;
     background-color: #264653;
-    border: 1px solid white;
     text-align: center;
     color: #e9c46a;
     border-radius: 5px;
@@ -128,7 +127,6 @@
         top:-100vh;
         left:2px;
         border-right: 0px solid #264653;
-
     }
     .c_mobile_view_icon{
         display: block;
